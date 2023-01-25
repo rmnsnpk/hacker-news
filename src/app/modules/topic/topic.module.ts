@@ -7,5 +7,6 @@ import { TimePipe } from './pipes/time.pipe';
 @NgModule({
   declarations: [TopicComponent, PointsPipe, TimePipe],
   imports: [CommonModule],
+  exports: [TopicComponent],
 })
 export class TopicModule {}
