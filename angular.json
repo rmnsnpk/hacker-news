@@ -28,7 +28,8 @@
             "styles": [
               "src/styles/styles.scss",
               "src/styles/colors.scss",
-              "src/styles/fonts.scss"
+              "src/styles/fonts.scss",
+              "src/styles/text.mixins.scss"
             ],
             "scripts": []
           },
