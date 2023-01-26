@@ -1,3 +1,17 @@
-<div class="container">
-  <hck-topic *ngFor="let id of topicsId"></hck-topic>
-</div>
+<section>
+  <cdk-virtual-scroll-viewport
+    itemSize="58"
+    class="viewport"
+    appendOnly
+    minBufferPx="{{ 58 * 30 }}"
+    maxBufferPx="{{ 58 * 50 }}"
+  >
+    <div class="container">
+      <hck-topic
+        *cdkVirtualFor="let id of topicsId; let index = index"
+        [count]="index"
+        [topicId]="id"
+      ></hck-topic>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</section>

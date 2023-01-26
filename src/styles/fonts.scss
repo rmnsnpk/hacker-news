@@ -1,5 +1,32 @@
+@use "colors" as *;
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
   font-family: "Quicksand", sans-serif;
+}
+
+$smallFontSize: 14px;
+$mediumFontSize: 16px;
+$largeFontSize: 18px;
+
+$smallFontWeight: 300;
+$mediumFontWeight: 400;
+$largeFontWeight: 700;
+
+@mixin smallText {
+  color: $black;
+  font-size: $smallFontSize;
+  font-weight: $smallFontWeight;
+}
+
+@mixin mediumText {
+  color: $black;
+  font-size: $mediumFontSize;
+  font-weight: $mediumFontWeight;
+}
+
+@mixin largeText {
+  color: $black;
+  font-size: $largeFontSize;
+  font-weight: $largeFontWeight;
 }

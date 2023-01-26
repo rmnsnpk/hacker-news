@@ -1,0 +1,38 @@
+@use "../../../../../styles/fonts" as *;
+@use "../../../../../styles/gap.variables.scss" as *;
+
+:host {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  gap: $largeGap;
+  width: fit-content;
+  &-header {
+    display: flex;
+    gap: $mediumGap;
+    align-items: center;
+    &-number {
+      @include largeText;
+    }
+    &-title {
+      @include largeText;
+      text-decoration: none;
+    }
+    &-link {
+      @include smallText;
+      text-decoration: none;
+    }
+  }
+  &-properties {
+    display: flex;
+    gap: $smallGap;
+    align-items: center;
+    max-width: 100%;
+    @include mediumText;
+  }
+}

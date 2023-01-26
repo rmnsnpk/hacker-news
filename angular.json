@@ -29,7 +29,7 @@
               "src/styles/styles.scss",
               "src/styles/colors.scss",
               "src/styles/fonts.scss",
-              "src/styles/text.mixins.scss"
+              "src/styles/gap.variables.scss"
             ],
             "scripts": []
           },

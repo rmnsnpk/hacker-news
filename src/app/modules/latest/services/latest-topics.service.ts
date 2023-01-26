@@ -11,8 +11,8 @@ export class LatestTopicsService {
   };
   constructor(private http: HttpClient) {}
 
-  public getLatestTopics(): Observable<Number[]> {
-    return this.http.get<Number[]>(
+  public getLatestTopics(): Observable<number[]> {
+    return this.http.get<number[]>(
       environment.api + this.endPoints.latest + API_OPTIONS
     );
   }
