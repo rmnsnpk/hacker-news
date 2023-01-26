@@ -23,3 +23,10 @@ section {
   height: calc(100vh - $menuHeight);
   width: 100%;
 }
+@media screen and (max-width: 580px) {
+  section {
+    .container {
+      margin: 20px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <div class="topic" *ngIf="topic">
   <div class="topic-header">
-    <span class="topic-header-number">{{ count + 1 }}</span>
+    <!-- <span class="topic-header-number">{{ count + 1 }}</span> -->
     <a [href]="topic.url" target="_blank" class="topic-header-title">
-      {{ topic.title }}
+      {{ count + 1 + " " + topic.title }}
     </a>
     <a
       class="topic-header-link"

@@ -10,7 +10,7 @@
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   height: $menuHeight;
   background-color: $orange;
   display: flex;
@@ -23,9 +23,17 @@
     align-items: center;
     gap: $extraLargeGap;
     list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
     &-item {
       cursor: pointer;
       @include largeText;
     }
+  }
+}
+@media screen and (max-width: 540px) {
+  .header {
+    height: $mobileMenuHeight;
+    padding: 0 20px;
   }
 }

@@ -16,6 +16,7 @@
     display: flex;
     gap: $mediumGap;
     align-items: center;
+    flex-wrap: wrap;
     &-number {
       @include largeText;
     }
@@ -32,6 +33,7 @@
     display: flex;
     gap: $smallGap;
     align-items: center;
+    flex-wrap: wrap;
     max-width: 100%;
     @include mediumText;
   }
