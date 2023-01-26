@@ -25,11 +25,36 @@ section {
   height: calc(100vh - $menuHeight);
   width: 100%;
 }
+
+@media screen and (max-width: 1050px) {
+  section {
+    .container {
+      margin: 50px;
+      padding: 30px;
+    }
+  }
+}
 @media screen and (max-width: 580px) {
   section {
     .container {
       margin: 20px;
       padding: 20px;
     }
+  }
+  .viewport {
+    height: calc(100vh - $mobileMenuHeight);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 340px) {
+  section {
+    .container {
+      margin: 0;
+      padding: 20px;
+    }
+  }
+  .viewport {
+    height: calc(100vh - $smallMobileMenuHeight);
+    width: 100%;
   }
 }

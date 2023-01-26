@@ -3,10 +3,10 @@ export interface Topic {
   type: string;
   by: string;
   time: number;
-  text: string;
   score: number;
   title: string;
   url?: string;
+  text?: string;
   deleted?: boolean;
   dead?: boolean;
   parent?: number;

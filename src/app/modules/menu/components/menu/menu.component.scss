@@ -35,6 +35,12 @@
 @media screen and (max-width: 540px) {
   .header {
     height: $mobileMenuHeight;
-    padding: 0 20px;
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .header {
+    height: $smallMobileMenuHeight;
+    padding: 5px 10px;
   }
 }

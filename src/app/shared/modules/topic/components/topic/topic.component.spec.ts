@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { expectedTopic } from 'test/mocks/expected-topic.mock';
+import { topicServiceMock } from 'test/mocks/topic-service.mock';
+import { TopicService } from '../../services/topic.service';
 
 import { TopicComponent } from './topic.component';
 
@@ -8,9 +11,14 @@ describe('TopicComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopicComponent ]
-    })
-    .compileComponents();
+      declarations: [TopicComponent],
+      providers: [
+        {
+          provide: TopicService,
+          useValue: topicServiceMock,
+        },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TopicComponent);
     component = fixture.componentInstance;
@@ -19,5 +27,9 @@ describe('TopicComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should get topic from service by id', () => {
+    component.topicId = 123;
+    expect(component.topic).toEqual(expectedTopic);
   });
 });

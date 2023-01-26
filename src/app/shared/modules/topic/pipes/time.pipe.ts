@@ -9,10 +9,13 @@ export class TimePipe implements PipeTransform {
     let timeFromCreating = dataNow - dataOfCreating;
     let result;
     switch (true) {
-      case timeFromCreating <= 60:
+      case timeFromCreating <= 59:
         result = '0 minutes ago';
         break;
-      case timeFromCreating <= 3599 && timeFromCreating > 60:
+      case timeFromCreating <= 119 && timeFromCreating > 60:
+        result = '1 minute ago';
+        break;
+      case timeFromCreating <= 3599 && timeFromCreating > 120:
         result = Math.round(timeFromCreating / 60) + ' minutes ago';
         break;
       case timeFromCreating <= 7199 && timeFromCreating > 3599:
