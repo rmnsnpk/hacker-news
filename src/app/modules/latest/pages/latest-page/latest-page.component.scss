@@ -10,12 +10,14 @@
 
 section {
   width: 100%;
-  background-color: $beige;
+  background-color: $white;
   .container {
     display: flex;
     flex-direction: column;
     gap: $extraLargeGap;
-    margin: 50px;
+    background-color: $beige;
+    margin: 50px 150px;
+    padding: 50px;
   }
 }
 
@@ -27,6 +29,7 @@ section {
   section {
     .container {
       margin: 20px;
+      padding: 20px;
     }
   }
 }

@@ -27,7 +27,8 @@
     justify-content: center;
     &-item {
       cursor: pointer;
-      @include largeText;
+      font-size: $largeFontSize;
+      font-weight: $mediumFontWeight;
     }
   }
 }
