@@ -5,7 +5,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { LatestTopicsService } from '../../services/latest-topics.service';
+import { TopicsService } from 'src/app/core/services/topics.service';
 
 @UntilDestroy()
 @Component({
@@ -18,12 +18,13 @@ export class LatestPageComponent implements OnInit {
   public topicsId: number[];
 
   constructor(
-    private LatestTopicsService: LatestTopicsService,
+    public topicsService: TopicsService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    this.LatestTopicsService.getLatestTopics()
+    this.topicsService
+      .getLatestTopics()
       .pipe(untilDestroyed(this))
       .subscribe((topicsId) => {
         this.topicsId = topicsId;

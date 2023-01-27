@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TopicsService } from 'src/app/core/services/topics.service';
 import { expectedTopic } from 'test/mocks/expected-topic.mock';
 import { topicServiceMock } from 'test/mocks/topic-service.mock';
-import { TopicService } from '../../services/topic.service';
 
 import { TopicComponent } from './topic.component';
 
@@ -14,7 +14,7 @@ describe('TopicComponent', () => {
       declarations: [TopicComponent],
       providers: [
         {
-          provide: TopicService,
+          provide: TopicsService,
           useValue: topicServiceMock,
         },
       ],

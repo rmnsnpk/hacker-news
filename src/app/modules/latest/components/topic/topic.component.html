@@ -8,12 +8,14 @@
       [href]="topic.url"
       target="_blank"
       *ngIf="topic.url"
-      >{{ topic.url | link }}</a
+      >{{ topic.url | shortUrl }}</a
     >
   </div>
   <div class="topic-properties">
     <p class="topic-properties-owner">Created by: {{ topic.by }};</p>
-    <p class="topic-properties-score">{{ topic.score | points }};</p>
+    <p class="topic-properties-score">
+      {{ topic.score | multOrSing : "point" }};
+    </p>
     <p class="topic-properties-time">{{ topic.time | time }};</p>
     <p class="topic-properties-type">Type: {{ topic.type }};</p>
   </div>

@@ -6,8 +6,8 @@ import {
   OnInit,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { Topic } from '../../models/topic.model';
-import { TopicService } from '../../services/topic.service';
+import { Topic } from 'src/app/core/models/topic.model';
+import { TopicsService } from 'src/app/core/services/topics.service';
 
 @UntilDestroy()
 @Component({
@@ -18,7 +18,7 @@ import { TopicService } from '../../services/topic.service';
 })
 export class TopicComponent implements OnInit {
   @Input() set topicId(id: number) {
-    this.topicService
+    this.topicsService
       .getTopicById(id)
       .pipe(untilDestroyed(this))
       .subscribe((topic) => {
@@ -31,7 +31,7 @@ export class TopicComponent implements OnInit {
   public topic: Topic;
 
   constructor(
-    private topicService: TopicService,
+    private topicsService: TopicsService,
     private cdr: ChangeDetectorRef
   ) {}
   ngOnInit(): void {}
