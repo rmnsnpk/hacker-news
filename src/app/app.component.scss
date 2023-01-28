@@ -1,6 +1,7 @@
 @use "colors" as *;
 @use "gap" as *;
 @use "menu" as *;
+@use "media-queries" as *;
 
 .container {
   height: calc(100vh - $menuHeight - 100px);
@@ -13,19 +14,21 @@
   padding: 30px;
   box-shadow: 0 0 30px rgba($color: $black, $alpha: 0.2);
 }
-@media screen and (max-width: 900px) {
+
+@include forTablets {
   .container {
     height: calc(100vh - $menuHeight);
     width: 100vw;
     margin: 0;
   }
 }
-@media screen and (max-width: 540px) {
+
+@include forLargeMobiles {
   .container {
     height: calc(100vh - $mobileMenuHeight);
   }
 }
-@media screen and (max-width: 340px) {
+@include forSmallMobiles {
   .container {
     height: calc(100vh - $smallMobileMenuHeight);
   }

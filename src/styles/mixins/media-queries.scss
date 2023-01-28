@@ -1,0 +1,15 @@
+@mixin forTablets {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin forLargeMobiles {
+  @media screen and (max-width: 540px) {
+    @content;
+  }
+}
+@mixin forSmallMobiles {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}

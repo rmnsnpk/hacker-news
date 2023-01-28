@@ -1,7 +1,9 @@
 @use "variables/fonts" as *;
-@use "variables/colors" as *;
-@use "variables/menu" as *;
-@use "variables/gap" as *;
+@use "mixins/fonts" as *;
+@use "colors" as *;
+@use "menu" as *;
+@use "gap" as *;
+@use "media-queries" as *;
 
 :host {
   width: 100%;
@@ -27,10 +29,11 @@
     flex-wrap: wrap;
     justify-content: center;
     &__item {
+      @include largeText;
       position: relative;
       cursor: pointer;
-      font-size: $largeFontSize;
-      font-weight: $mediumFontWeight;
+
+      color: $white;
     }
     &__item::after {
       content: "";
@@ -50,13 +53,14 @@
     }
   }
 }
-@media screen and (max-width: 540px) {
+
+@include forLargeMobiles {
   .header {
     height: $mobileMenuHeight;
     padding: 10px 20px;
   }
 }
-@media screen and (max-width: 340px) {
+@include forSmallMobiles {
   .header {
     height: $smallMobileMenuHeight;
     padding: 5px 10px;
