@@ -2,15 +2,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopicsService } from 'src/app/core/services/topics.service';
 import { latestTopicsServiceMock } from 'test/mocks/latest-topics-service.mock';
 
-import { LatestPageComponent } from './latest-page.component';
+import { LatestNewsPageComponent } from './latest-news-page.component';
 
-describe('LatestPageComponent', () => {
-  let component: LatestPageComponent;
-  let fixture: ComponentFixture<LatestPageComponent>;
+describe('LatestNewsPageComponent', () => {
+  let component: LatestNewsPageComponent;
+  let fixture: ComponentFixture<LatestNewsPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LatestPageComponent],
+      declarations: [LatestNewsPageComponent],
       providers: [
         {
           provide: TopicsService,
@@ -19,7 +19,7 @@ describe('LatestPageComponent', () => {
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LatestPageComponent);
+    fixture = TestBed.createComponent(LatestNewsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

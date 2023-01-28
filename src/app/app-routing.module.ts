@@ -6,8 +6,8 @@ const routes: Routes = [
     path: 'latest',
     title: 'Latest',
     loadChildren: () =>
-      import('./modules/latest/latest.module').then(
-        (module) => module.LatestModule
+      import('./modules/latest-news/latest-news.module').then(
+        (module) => module.LatestNewsModule
       ),
   },
   { path: '', redirectTo: '/latest', pathMatch: 'full' },

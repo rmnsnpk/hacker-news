@@ -10,11 +10,11 @@ import { TopicsService } from 'src/app/core/services/topics.service';
 @UntilDestroy()
 @Component({
   selector: 'hck-latest-page',
-  templateUrl: './latest-page.component.html',
-  styleUrls: ['./latest-page.component.scss'],
+  templateUrl: './latest-news-page.component.html',
+  styleUrls: ['./latest-news-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LatestPageComponent implements OnInit {
+export class LatestNewsPageComponent implements OnInit {
   public topicIds: number[];
 
   constructor(
