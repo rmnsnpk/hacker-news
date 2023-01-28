@@ -9,7 +9,7 @@
   </div>
   <div class="topic__properties">
     <p>Created by: {{ topic.by }};</p>
-    <p>{{ topic.score | multOrSing : "point" }};</p>
+    <p>{{ topic.score | multOrSngl : "point" }};</p>
     <p>{{ topic.time | time }};</p>
     <p>Type: {{ topic.type }};</p>
   </div>

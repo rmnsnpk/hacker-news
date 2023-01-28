@@ -5,7 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimePipe implements PipeTransform {
   transform(dataOfCreating: number): string {
-    let dataNow = Math.round(Date.now() / 1000);
     const timeFromCreating = Math.round(Date.now() / 1000 - dataOfCreating);
 
     const timeRanges = [

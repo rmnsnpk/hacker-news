@@ -1,6 +1,6 @@
 @use "colors" as *;
-@use "gap.variables" as *;
-@use "menu.variables" as *;
+@use "gap" as *;
+@use "menu" as *;
 
 .container {
   height: calc(100vh - $menuHeight - 100px);

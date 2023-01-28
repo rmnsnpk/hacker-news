@@ -3,9 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   Input,
-  OnChanges,
   OnInit,
-  SimpleChanges,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Topic } from 'src/app/core/models/topic.model';
@@ -28,6 +26,7 @@ export class TopicComponent implements OnInit {
     private topicsService: TopicsService,
     private cdr: ChangeDetectorRef
   ) {}
+
   ngOnInit(): void {
     this.topicsService
       .getTopicById(this.topicId)

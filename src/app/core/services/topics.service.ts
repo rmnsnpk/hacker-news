@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Topic } from '../models/topic.model';
 
@@ -11,6 +11,7 @@ export class TopicsService {
     latest: 'newstories',
   };
   private apiOptions = '.json?print=pretty';
+
   constructor(private http: HttpClient) {}
 
   public getTopicById(id: number): Observable<Topic> {
@@ -18,6 +19,7 @@ export class TopicsService {
       environment.api + this.endPoints.topic + id + this.apiOptions
     );
   }
+
   public getLatestTopics(): Observable<number[]> {
     return this.http.get<number[]>(
       environment.api + this.endPoints.latest + this.apiOptions

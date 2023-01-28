@@ -27,7 +27,11 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles"]
+              "includePaths": [
+                "src/styles/variables",
+                "src/styles/mixins",
+                "src/styles"
+              ]
             },
             "scripts": []
           },

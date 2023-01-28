@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'multOrSing',
+  name: 'multOrSngl',
 })
 export class MultipleOrSinglePipe implements PipeTransform {
   transform(value: number, word: string): string {

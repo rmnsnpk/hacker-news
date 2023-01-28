@@ -5,7 +5,6 @@ import {
   OnInit,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { of } from 'rxjs';
 import { TopicsService } from 'src/app/core/services/topics.service';
 
 @UntilDestroy()

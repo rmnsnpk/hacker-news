@@ -1,7 +1,7 @@
-@use "fonts" as *;
-@use "colors" as *;
-@use "menu.variables" as *;
-@use "gap.variables" as *;
+@use "variables/fonts" as *;
+@use "variables/colors" as *;
+@use "variables/menu" as *;
+@use "variables/gap" as *;
 
 :host {
   width: 100%;
