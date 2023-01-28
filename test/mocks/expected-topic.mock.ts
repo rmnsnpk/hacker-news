@@ -1,4 +1,4 @@
-import { Topic } from 'src/app/shared/modules/topic/models/topic.model';
+import { Topic } from 'src/app/core/models/topic.model';
 
 export const expectedTopic: Topic = {
   by: 'dhouston',

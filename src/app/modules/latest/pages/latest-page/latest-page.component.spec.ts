@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TopicsService } from 'src/app/core/services/topics.service';
 import { latestTopicsServiceMock } from 'test/mocks/latest-topics-service.mock';
-
-import { LatestTopicsService } from '../../services/latest-topics.service';
 
 import { LatestPageComponent } from './latest-page.component';
 
@@ -14,7 +13,7 @@ describe('LatestPageComponent', () => {
       declarations: [LatestPageComponent],
       providers: [
         {
-          provide: LatestTopicsService,
+          provide: TopicsService,
           useValue: latestTopicsServiceMock,
         },
       ],
