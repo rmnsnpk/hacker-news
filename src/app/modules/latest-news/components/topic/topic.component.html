@@ -4,13 +4,13 @@
       {{ count + 1 + " " + topic.title }}
     </a>
     <a class="link" [href]="topic.url" target="_blank" *ngIf="topic.url">{{
-      topic.url | shortUrl
+      topic.url | domain
     }}</a>
   </div>
   <div class="topic__properties">
     <p>Created by: {{ topic.by }};</p>
-    <p>{{ topic.score | multOrSngl : "point" }};</p>
-    <p>{{ topic.time | time }};</p>
+    <p>{{ topic.score + " point" + (topic.score !== 1 ? "s" : "") }};</p>
+    <p>{{ topic.time | timeAgo }};</p>
     <p>Type: {{ topic.type }};</p>
   </div>
 </div>

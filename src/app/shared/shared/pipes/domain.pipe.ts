@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'shortUrl',
+  name: 'domain',
 })
-export class ShortUrlPipe implements PipeTransform {
+export class DomainExtractorPipe implements PipeTransform {
   transform(url: string): string {
     const match = url.match(
       /^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/

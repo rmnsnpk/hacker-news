@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'time',
+  name: 'timeAgo',
 })
-export class TimePipe implements PipeTransform {
+export class TimeAgoPipe implements PipeTransform {
   transform(dataOfCreating: number): string {
     const timeFromCreating = Math.round(Date.now() / 1000 - dataOfCreating);
 

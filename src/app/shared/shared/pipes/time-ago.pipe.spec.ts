@@ -1,10 +1,10 @@
-import { TimePipe } from './time.pipe';
+import { TimeAgoPipe } from './time-ago.pipe';
 
-describe('TimePipe', () => {
-  let pipe: TimePipe;
+describe('TimeAgoPipe', () => {
+  let pipe: TimeAgoPipe;
   let dataNow: number;
   beforeEach(() => {
-    pipe = new TimePipe();
+    pipe = new TimeAgoPipe();
     dataNow = Math.round(Date.now() / 1000);
   });
 
