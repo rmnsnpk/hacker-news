@@ -20,3 +20,6 @@
   @include smallText;
   text-decoration: none;
 }
+.link:hover {
+  text-decoration: underline;
+}
