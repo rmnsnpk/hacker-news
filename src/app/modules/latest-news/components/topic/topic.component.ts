@@ -18,9 +18,13 @@ import { TopicsService } from 'src/app/core/services/topics.service';
 })
 export class TopicComponent implements OnInit {
   @Input() topicId: number;
-  @Input() count: number;
+  @Input() set count(counter: number) {
+    this.increasedCount = ++counter + '. ';
+  }
 
   public topic: Topic;
+
+  increasedCount: string;
 
   constructor(
     private topicsService: TopicsService,

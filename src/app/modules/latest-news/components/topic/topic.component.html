@@ -1,7 +1,7 @@
 <div class="topic" *ngIf="topic">
   <div class="topic__header">
     <a [href]="topic.url" target="_blank" class="title">
-      {{ count + 1 + " " + topic.title }}
+      {{ increasedCount + topic.title }}
     </a>
     <a class="link" [href]="topic.url" target="_blank" *ngIf="topic.url">{{
       topic.url | domain

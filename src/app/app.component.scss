@@ -6,12 +6,9 @@
 .container {
   height: calc(100vh - $menuHeight - 100px);
   width: calc(100vw - 100px);
-  display: flex;
-  flex-direction: column;
-  gap: $extraLargeGap;
   background-color: $beige;
   margin: 50px;
-  padding: 30px;
+  padding: 0;
   box-shadow: 0 0 30px rgba($color: $black, $alpha: 0.2);
 }
 
