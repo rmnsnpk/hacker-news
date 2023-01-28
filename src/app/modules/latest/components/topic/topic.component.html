@@ -1,22 +1,16 @@
 <div class="topic" *ngIf="topic">
-  <div class="topic-header">
-    <a [href]="topic.url" target="_blank" class="topic-header-title">
+  <div class="topic__header">
+    <a [href]="topic.url" target="_blank" class="title">
       {{ count + 1 + " " + topic.title }}
     </a>
-    <a
-      class="topic-header-link"
-      [href]="topic.url"
-      target="_blank"
-      *ngIf="topic.url"
-      >{{ topic.url | shortUrl }}</a
-    >
+    <a class="link" [href]="topic.url" target="_blank" *ngIf="topic.url">{{
+      topic.url | shortUrl
+    }}</a>
   </div>
-  <div class="topic-properties">
-    <p class="topic-properties-owner">Created by: {{ topic.by }};</p>
-    <p class="topic-properties-score">
-      {{ topic.score | multOrSing : "point" }};
-    </p>
-    <p class="topic-properties-time">{{ topic.time | time }};</p>
-    <p class="topic-properties-type">Type: {{ topic.type }};</p>
+  <div class="topic__properties">
+    <p>Created by: {{ topic.by }};</p>
+    <p>{{ topic.score | multOrSing : "point" }};</p>
+    <p>{{ topic.time | time }};</p>
+    <p>Type: {{ topic.type }};</p>
   </div>
 </div>

@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,12 @@ import { MenuModule } from './modules/menu/menu.module';
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MenuModule, MenuModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MenuModule,
+    MenuModule,
+    ScrollingModule,
+  ],
 })
 export class AppModule {}

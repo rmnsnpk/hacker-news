@@ -1,6 +1,4 @@
-@use "../../../../../styles/menu.variables" as *;
-@use "../../../../../styles/colors" as *;
-@use "../../../../../styles/gap.variables" as *;
+@use "gap.variables" as *;
 
 :host {
   width: 100%;
@@ -8,53 +6,14 @@
   display: block;
 }
 
-section {
-  width: 100%;
-  background-color: $white;
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: $extraLargeGap;
-    background-color: $beige;
-    margin: 50px 150px;
-    padding: 50px;
-  }
-}
-
 .viewport {
-  height: calc(100vh - $menuHeight);
-  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 1050px) {
-  section {
-    .container {
-      margin: 50px;
-      padding: 30px;
-    }
-  }
-}
-@media screen and (max-width: 580px) {
-  section {
-    .container {
-      margin: 20px;
-      padding: 20px;
-    }
-  }
-  .viewport {
-    height: calc(100vh - $mobileMenuHeight);
-    width: 100%;
-  }
-}
-@media screen and (max-width: 340px) {
-  section {
-    .container {
-      margin: 0;
-      padding: 20px;
-    }
-  }
-  .viewport {
-    height: calc(100vh - $smallMobileMenuHeight);
-    width: 100%;
-  }
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $extraLargeGap;
 }

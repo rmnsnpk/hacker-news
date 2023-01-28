@@ -3,7 +3,9 @@ import {
   ChangeDetectorRef,
   Component,
   Input,
+  OnChanges,
   OnInit,
+  SimpleChanges,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Topic } from 'src/app/core/models/topic.model';
@@ -17,15 +19,7 @@ import { TopicsService } from 'src/app/core/services/topics.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopicComponent implements OnInit {
-  @Input() set topicId(id: number) {
-    this.topicsService
-      .getTopicById(id)
-      .pipe(untilDestroyed(this))
-      .subscribe((topic) => {
-        this.topic = topic;
-        this.cdr.markForCheck();
-      });
-  }
+  @Input() topicId: number;
   @Input() count: number;
 
   public topic: Topic;
@@ -34,5 +28,13 @@ export class TopicComponent implements OnInit {
     private topicsService: TopicsService,
     private cdr: ChangeDetectorRef
   ) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.topicsService
+      .getTopicById(this.topicId)
+      .pipe(untilDestroyed(this))
+      .subscribe((topic) => {
+        this.topic = topic;
+        this.cdr.detectChanges();
+      });
+  }
 }

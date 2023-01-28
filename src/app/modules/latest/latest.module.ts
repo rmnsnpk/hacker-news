@@ -6,21 +6,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { TopicsService } from 'src/app/core/services/topics.service';
 import { TopicComponent } from './components/topic/topic.component';
-import { MultipleOrSinglePipe } from 'src/app/core/pipes/multiple-or-single.pipe';
+import { MultipleOrSinglePipe } from 'src/app/modules/latest/pipes/multiple-or-single.pipe';
 
-import { TimePipe } from 'src/app/core/pipes/time.pipe';
-import { ShortUrlPipe } from 'src/app/core/pipes/short-url.pipe';
+import { TimePipe } from 'src/app/modules/latest/pipes/time.pipe';
+import { ShortUrlPipe } from 'src/app/modules/latest/pipes/short-url.pipe';
 
 @NgModule({
-  declarations: [LatestPageComponent, TopicComponent],
+  declarations: [
+    LatestPageComponent,
+    TopicComponent,
+    MultipleOrSinglePipe,
+    ShortUrlPipe,
+    TimePipe,
+  ],
   imports: [
     CommonModule,
     LatestRoutingModule,
     HttpClientModule,
     ScrollingModule,
-    MultipleOrSinglePipe,
-    ShortUrlPipe,
-    TimePipe,
   ],
   providers: [TopicsService],
 })

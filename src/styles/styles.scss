@@ -1,5 +1,22 @@
+@use "fonts" as *;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  font-family: "Quicksand", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.title {
+  @include largeText;
+  text-decoration: none;
+}
+
+.link {
+  @include smallText;
+  text-decoration: none;
 }

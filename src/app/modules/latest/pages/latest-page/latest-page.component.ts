@@ -5,6 +5,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { of } from 'rxjs';
 import { TopicsService } from 'src/app/core/services/topics.service';
 
 @UntilDestroy()
@@ -15,7 +16,7 @@ import { TopicsService } from 'src/app/core/services/topics.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LatestPageComponent implements OnInit {
-  public topicsId: number[];
+  public topicIds: number[];
 
   constructor(
     public topicsService: TopicsService,
@@ -27,7 +28,7 @@ export class LatestPageComponent implements OnInit {
       .getLatestTopics()
       .pipe(untilDestroyed(this))
       .subscribe((topicsId) => {
-        this.topicsId = topicsId;
+        this.topicIds = topicsId;
         this.cdr.markForCheck();
       });
   }

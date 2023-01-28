@@ -25,12 +25,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "src/styles/styles.scss",
-              "src/styles/colors.scss",
-              "src/styles/fonts.scss",
-              "src/styles/gap.variables.scss"
-            ],
+            "styles": ["src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "scripts": []
           },
           "configurations": {

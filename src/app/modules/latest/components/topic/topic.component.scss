@@ -1,5 +1,5 @@
-@use "../../../../../styles/fonts.scss" as *;
-@use "../../../../../styles/gap.variables.scss" as *;
+@use "fonts" as *;
+@use "gap.variables" as *;
 
 :host {
   width: 100%;
@@ -12,24 +12,13 @@
   flex-direction: column;
   gap: $largeGap;
   width: fit-content;
-  &-header {
+  &__header {
     display: flex;
     gap: $mediumGap;
     align-items: center;
     flex-wrap: wrap;
-    &-number {
-      @include largeText;
-    }
-    &-title {
-      @include largeText;
-      text-decoration: none;
-    }
-    &-link {
-      @include smallText;
-      text-decoration: none;
-    }
   }
-  &-properties {
+  &__properties {
     display: flex;
     gap: $smallGap;
     align-items: center;
