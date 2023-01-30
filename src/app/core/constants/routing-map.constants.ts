@@ -1,9 +1,9 @@
 export const ROUTING_MAP = {
   Latest: 'latest',
-  Past: '/',
-  Comments: '/',
-  Ask: '/',
-  Show: '/',
-  Jobs: '/',
-  Submit: '/',
+  Past: 'any',
+  Comments: 'any',
+  Ask: 'any',
+  Show: 'any',
+  Jobs: 'any',
+  Submit: 'any',
 };
